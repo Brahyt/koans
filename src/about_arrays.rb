@@ -3,8 +3,8 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 class AboutArrays < Neo::Koan
   def test_creating_arrays
     empty_array = Array.new
-    assert_equal __(Array), empty_array.class
-    assert_equal __(0), empty_array.size
+    assert_equal Array, empty_array.class
+    assert_equal 0, empty_array.size
   end
 
   def test_array_literals
@@ -35,7 +35,7 @@ class AboutArrays < Neo::Koan
   def test_slicing_arrays
     array = [:peanut, :butter, :and, :jelly]
 
-    assert_equal __([:peanut]), array[0,1]
+    assert_equal (:pean), array[0,1]
     assert_equal __([:peanut, :butter]), array[0,2]
     assert_equal __([:and, :jelly]), array[2,2]
     assert_equal __([:and, :jelly]), array[2,20]
